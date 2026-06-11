@@ -19,6 +19,7 @@ body{
 background:#f5f7fa;
 color:#1f2937;
 line-height:1.5;
+transition:0.3s ease;
 }
 
 /* HEADER */
@@ -26,6 +27,7 @@ header{
 background:white;
 padding:50px 10%;
 border-bottom:1px solid #e5e7eb;
+transition:0.3s;
 }
 
 .hero-container{
@@ -71,10 +73,7 @@ color:#4b5563;
 margin-bottom:14px;
 }
 
-/* ===================== */
-/* HEADER BUTTONS (BLUE) */
-/* ===================== */
-
+/* BUTTONS (BLUE) */
 .btn-group{
 display:flex;
 flex-wrap:wrap;
@@ -99,9 +98,21 @@ border-color:#1d4ed8;
 transform:translateY(-2px);
 }
 
+/* THEME BUTTON */
+.theme-btn{
+background:white;
+border:1px solid #d1d5db;
+padding:8px 12px;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+margin-left:10px;
+}
+
 /* SECTIONS */
 section{
 padding:30px 10%;
+transition:0.3s;
 }
 
 .section-title{
@@ -152,10 +163,7 @@ box-shadow:0 1px 5px rgba(0,0,0,0.05);
 font-size:14px;
 }
 
-/* ===================== */
 /* CONTACT BUTTONS (WHITE ONLY) */
-/* ===================== */
-
 .contact-card .btn{
 background:white !important;
 color:#111827 !important;
@@ -188,6 +196,41 @@ margin-top:20px;
 font-size:14px;
 }
 
+/* ===================== */
+/* DARK MODE */
+/* ===================== */
+
+body.dark{
+background:#0f172a;
+color:#e5e7eb;
+}
+
+body.dark header{
+background:#0f172a;
+border-color:#1e293b;
+}
+
+body.dark .card{
+background:#1e293b;
+border-color:#334155;
+color:#e5e7eb;
+}
+
+body.dark .section-title{
+color:#ffffff;
+}
+
+body.dark .skill{
+background:#1e293b;
+color:#e5e7eb;
+border:1px solid #334155;
+}
+
+body.dark footer{
+background:#0f172a;
+border-color:#1e293b;
+}
+
 /* MOBILE */
 @media (max-width:768px){
 .hero-container{
@@ -213,13 +256,15 @@ text-align:center;
     </div>
 
     <div class="hero-right">
-        <h1>Shalom Vardhan Gudiseva</h1>
+        <h1>
+            Gudiseva Shalom Vardhan 
+            <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+        </h1>
 
         <p>
         Automotive Design & Automation Engineer | Digital Twin | CAD | Robotics | Manufacturing
         </p>
 
-        <!-- HEADER BUTTONS (BLUE) -->
         <div class="btn-group">
             <a href="resume.pdf" class="btn">Download Resume</a>
             <a href="mailto:shalomvardhan@gmail.com" class="btn">Email Me</a>
@@ -234,13 +279,13 @@ text-align:center;
 <!-- ABOUT -->
 <section>
 <h2 class="section-title">About Me</h2>
+
 <div class="card">
 <p>
-I am an Automotive Design and Automation Engineer with over 2 years of experience in automotive design, industrial automation, production support, and digital twin development.
+I am an Automotive Design and Automation Engineer with over 2 years of experience in automotive design, industrial automation, production support, and digital twin development. My expertise includes 3D CAD modeling, plant layout design, robotic automation, manufacturing process optimization, and production engineering.
 </p>
-<br>
-<p>
-I have worked on ABB robots, gantry systems, PLC modifications, and digital twin environments focused on improving productivity and efficiency.
+ <p>
+I have successfully worked on industrial automation projects involving ABB robots, gantry systems, PLC modifications, and digital twin environments. I am passionate about developing innovative engineering solutions that improve productivity, efficiency, and operational reliability.
 </p>
 </div>
 </section>
@@ -253,26 +298,59 @@ I have worked on ABB robots, gantry systems, PLC modifications, and digital twin
 
 <div class="card">
 <h3>Design Engineer – Actalent</h3>
-<p><strong>July 2024 – Present | Chennai</strong></p>
-
-<ul>
-<li>Developed digital twin models for industrial facilities</li>
-<li>Created 3D plant layouts using CAD tools</li>
-<li>Performed clash detection and spatial coordination</li>
-<li>Supported factory planning and documentation</li>
-</ul>
+<p><strong>July 2024 – April 2026 | Chennai</strong></p>
+<p>Responsibilities</p>
+    
+<p>
+Developed digital twin models representing real-world industrial and automotive manufacturing facilities.
+Created detailed 3D plant layouts and coordinated asset placement for production environments.
+Designed equipment layouts, safety systems, process flow arrangements, and manufacturing layouts using UG NX, AutoCAD, Inventor, and Navisworks.
+Performed 2D and 3D assembly synchronization to improve manufacturing visualization and layout accuracy.
+Conducted clash detection and spatial coordination studies to ensure optimal equipment positioning and project feasibility.
+Prepared engineering drawings, layout documentation, and design deliverables according to customer requirements.
+Supported factory planning activities through accurate digital representations of manufacturing facilities.
+Collaborated with engineering, production, and project teams to ensure design accuracy and successful project execution.
+Assisted in layout modifications and design improvements based on operational and manufacturing requirements.
+</p>
+<p>Key Achievements</p>
+<p>
+Successfully delivered digital twin and plant layout solutions that enhanced manufacturing planning and visualization.
+Developed accurate 3D facility models and asset placement layouts, improving production planning and space utilization.
+Reduced CAD model complexity and optimized part sizes, significantly improving file loading times and assembly performance.
+Improved design quality by identifying and resolving layout clashes before implementation, reducing rework and project delays.
+Enhanced digital twin model efficiency through optimized asset modeling while maintaining design accuracy and project standards.
+Contributed to efficient project delivery by providing high-quality engineering layouts and documentation within project timelines.
+Supported cross-functional teams in optimizing manufacturing workflows and facility layouts for improved operational efficiency.
+Maintained high design accuracy and compliance with customer requirements across multiple industrial and automotive projects.
+</p>
 </div>
 
 <div class="card">
 <h3>Automation Engineer – Greentech Industries</h3>
 <p><strong>July 2023 – June 2024</strong></p>
-
-<ul>
-<li>Installed ABB IRB robots</li>
-<li>Optimized robot motion paths</li>
-<li>Worked on PLC modifications</li>
-<li>Improved production efficiency</li>
-</ul>
+    <p>Responsibilities</p>
+<p>
+Installed, commissioned, and supported ABB IRB 2600 and IRB 4600 robots in automotive manufacturing environments.
+Programmed and optimized robot motion paths to improve cycle time, productivity, and process reliability.
+Designed, modified, and validated robotic fixtures, grippers, and End-of-Arm Tooling (EOAT) based on production requirements.
+Developed 3D models and engineering drawings for fixtures, grippers, and robotic attachments using SolidWorks.
+Conducted robot reach studies and tooling feasibility checks to ensure collision-free operation.
+Performed robot teaching, calibration, backup management, and program modifications.
+Troubleshot robots, sensors, grippers, fixtures, and automation equipment to minimize production downtime.
+Assisted in PLC logic modifications using GX Works and Delta PLC platforms to support production changes.
+Executed preventive maintenance activities to ensure reliable operation of robotic systems.
+Coordinated with production, maintenance, and quality teams to resolve manufacturing issues and improve operational efficiency.
+Supported continuous improvement initiatives to enhance manufacturing productivity and equipment performance.
+Key Achievements
+Successfully installed and commissioned ABB robotic systems for automotive production applications.
+Reduced robot cycle times through motion path optimization, increasing overall production output.
+Designed and implemented fixture and gripper modifications that improved part handling accuracy and operational efficiency.
+Successfully created and optimized robot path programs for an automated sand blasting robot in a foundry environment, improving process consistency and product quality.
+Minimized production downtime by effectively troubleshooting robotic and automation system issues.
+Improved manufacturing productivity through process optimization and automation enhancements.
+Supported successful execution of automation projects while maintaining safe and reliable production operations.
+Collaborated with cross-functional teams to deliver automation solutions that improved efficiency and process stability.
+</p>
 </div>
 
 </div>
@@ -336,7 +414,6 @@ I have worked on ABB robots, gantry systems, PLC modifications, and digital twin
 
 <br>
 
-<!-- CONTACT BUTTONS (WHITE ONLY) -->
 <div class="btn-group">
 <a href="mailto:shalomvardhan@gmail.com" class="btn">Email</a>
 <a href="https://wa.me/916303101491" class="btn">WhatsApp</a>
@@ -349,6 +426,12 @@ I have worked on ABB robots, gantry systems, PLC modifications, and digital twin
 <footer>
 © 2026 Shalom Vardhan Gudiseva | Portfolio
 </footer>
+
+<script>
+function toggleTheme(){
+document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>
