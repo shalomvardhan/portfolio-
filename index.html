@@ -47,12 +47,12 @@ width:200px;
 height:200px;
 border-radius:50%;
 object-fit:cover;
-border:4px solid #e5e7eb;
-transition:0.2s;
+border:4px solid #2563eb;
+transition:0.3s;
 }
 
 .profile-pic:hover{
-transform:scale(1.03);
+transform:scale(1.04);
 }
 
 .hero-right{
@@ -71,7 +71,10 @@ color:#4b5563;
 margin-bottom:14px;
 }
 
-/* BUTTONS (NO BLUE) */
+/* ===================== */
+/* HEADER BUTTONS (BLUE) */
+/* ===================== */
+
 .btn-group{
 display:flex;
 flex-wrap:wrap;
@@ -79,20 +82,20 @@ gap:8px;
 }
 
 .btn{
-background:white;
-color:#111827;
+background:#2563eb;
+color:white;
 padding:10px 16px;
 border-radius:8px;
 text-decoration:none;
 transition:0.2s;
 font-size:14px;
-border:1px solid #d1d5db;
+border:1px solid #2563eb;
 display:inline-block;
 }
 
 .btn:hover{
-background:#f3f4f6;
-border-color:#9ca3af;
+background:#1d4ed8;
+border-color:#1d4ed8;
 transform:translateY(-2px);
 }
 
@@ -107,7 +110,7 @@ margin-bottom:12px;
 color:#111827;
 }
 
-/* CARD (CLEAN WHITE) */
+/* CARDS */
 .card{
 background:white;
 padding:16px;
@@ -149,7 +152,23 @@ box-shadow:0 1px 5px rgba(0,0,0,0.05);
 font-size:14px;
 }
 
-/* CONTACT */
+/* ===================== */
+/* CONTACT BUTTONS (WHITE ONLY) */
+/* ===================== */
+
+.contact-card .btn{
+background:white !important;
+color:#111827 !important;
+border:1px solid #d1d5db !important;
+}
+
+.contact-card .btn:hover{
+background:#f3f4f6 !important;
+border-color:#9ca3af !important;
+transform:translateY(-2px);
+}
+
+/* CONTACT LINKS */
 .contact-card a{
 color:#111827;
 text-decoration:none;
@@ -200,8 +219,9 @@ text-align:center;
         Automotive Design & Automation Engineer | Digital Twin | CAD | Robotics | Manufacturing
         </p>
 
+        <!-- HEADER BUTTONS (BLUE) -->
         <div class="btn-group">
-            <a href="resume.pdf" download class="btn">Download Resume</a>
+            <a href="resume.pdf" class="btn">Download Resume</a>
             <a href="mailto:shalomvardhan@gmail.com" class="btn">Email Me</a>
             <a href="https://wa.me/916303101491" class="btn">WhatsApp</a>
             <a href="https://www.linkedin.com/in/shalom-vardhan-gudiseva-37417a283" class="btn">LinkedIn</a>
@@ -216,11 +236,11 @@ text-align:center;
 <h2 class="section-title">About Me</h2>
 <div class="card">
 <p>
-I am an Automotive Design and Automation Engineer with over 2 years of experience in automotive design, industrial automation, production support, and digital twin development. My expertise includes 3D CAD modeling, plant layout design, robotic automation, manufacturing process optimization, and production engineering.
+I am an Automotive Design and Automation Engineer with over 2 years of experience in automotive design, industrial automation, production support, and digital twin development.
 </p>
 <br>
 <p>
-I have successfully worked on industrial automation projects involving ABB robots, gantry systems, PLC modifications, and digital twin environments. I am passionate about developing innovative engineering solutions that improve productivity, efficiency, and operational reliability.
+I have worked on ABB robots, gantry systems, PLC modifications, and digital twin environments focused on improving productivity and efficiency.
 </p>
 </div>
 </section>
@@ -237,10 +257,9 @@ I have successfully worked on industrial automation projects involving ABB robot
 
 <ul>
 <li>Developed digital twin models for industrial facilities</li>
-<li>Created 3D plant layouts using UG NX, AutoCAD, Inventor</li>
+<li>Created 3D plant layouts using CAD tools</li>
 <li>Performed clash detection and spatial coordination</li>
-<li>Supported factory planning and layout optimization</li>
-<li>Delivered high-quality engineering documentation</li>
+<li>Supported factory planning and documentation</li>
 </ul>
 </div>
 
@@ -249,12 +268,10 @@ I have successfully worked on industrial automation projects involving ABB robot
 <p><strong>July 2023 – June 2024</strong></p>
 
 <ul>
-<li>Installed ABB IRB 2600 & IRB 4600 robots</li>
-<li>Programmed and optimized robot motion paths</li>
-<li>Designed fixtures and EOAT using SolidWorks</li>
-<li>Performed troubleshooting and maintenance</li>
-<li>Worked on PLC modifications (Delta, GX Works)</li>
-<li>Improved production efficiency and uptime</li>
+<li>Installed ABB IRB robots</li>
+<li>Optimized robot motion paths</li>
+<li>Worked on PLC modifications</li>
+<li>Improved production efficiency</li>
 </ul>
 </div>
 
@@ -286,22 +303,22 @@ I have successfully worked on industrial automation projects involving ABB robot
 
 <div class="card">
 <h3>Digital Twin Factory</h3>
-<p>Manufacturing simulation and virtual factory development.</p>
+<p>Manufacturing simulation system.</p>
 </div>
 
 <div class="card">
 <h3>ABB Robot Programming</h3>
-<p>Industrial automation and robot path optimization.</p>
+<p>Industrial automation project.</p>
 </div>
 
 <div class="card">
 <h3>Plant Layout Design</h3>
-<p>Factory layout optimization and workflow improvement.</p>
+<p>Factory workflow optimization.</p>
 </div>
 
 <div class="card">
 <h3>CAD Modeling</h3>
-<p>3D product design and engineering modeling.</p>
+<p>3D engineering design.</p>
 </div>
 
 </div>
@@ -319,6 +336,7 @@ I have successfully worked on industrial automation projects involving ABB robot
 
 <br>
 
+<!-- CONTACT BUTTONS (WHITE ONLY) -->
 <div class="btn-group">
 <a href="mailto:shalomvardhan@gmail.com" class="btn">Email</a>
 <a href="https://wa.me/916303101491" class="btn">WhatsApp</a>
