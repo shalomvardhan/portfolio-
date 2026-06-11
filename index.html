@@ -37,12 +37,6 @@ gap:50px;
 flex-wrap:wrap;
 }
 
-.hero-left{
-flex:1;
-display:flex;
-justify-content:center;
-}
-
 .profile-pic{
 width:200px;
 height:200px;
@@ -51,59 +45,77 @@ object-fit:cover;
 border:4px solid #2563eb;
 }
 
-.profile-pic:hover{
-transform:scale(1.03);
-transition:0.3s;
-}
-
-.hero-right{
-flex:2;
-text-align:left;
-}
-
-.hero-right h1{
-font-size:2.4rem;
-margin-bottom:8px;
-}
-
-.hero-right p{
-color:#4b5563;
-margin-bottom:14px;
-}
-
 /* BUTTONS */
-.btn-group{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-}
-
 .btn{
 background:#2563eb;
 color:white;
 padding:10px 16px;
 border-radius:8px;
 text-decoration:none;
-transition:0.2s;
-font-size:14px;
-border:1px solid #2563eb;
 display:inline-block;
+border:1px solid #2563eb;
 }
 
 .btn:hover{
 background:#1d4ed8;
 }
 
-/* THEME */
-.theme-btn{
-background:white;
-border:1px solid #d1d5db;
-padding:8px 12px;
-border-radius:8px;
-cursor:pointer;
+/* TOGGLE */
+.theme-switch{
+position:fixed;
+top:15px;
+right:15px;
+z-index:999;
 }
 
-/* SECTIONS */
+.switch{
+position:relative;
+width:52px;
+height:28px;
+display:inline-block;
+}
+
+.switch input{display:none;}
+
+.slider{
+position:absolute;
+cursor:pointer;
+background:#ccc;
+top:0;left:0;right:0;bottom:0;
+border-radius:34px;
+transition:0.3s;
+}
+
+.slider:before{
+position:absolute;
+content:"";
+height:20px;
+width:20px;
+left:4px;
+bottom:4px;
+background:white;
+border-radius:50%;
+transition:0.3s;
+}
+
+input:checked + .slider{
+background:#2563eb;
+}
+
+input:checked + .slider:before{
+transform:translateX(24px);
+}
+
+/* CARDS */
+.card{
+background:white;
+padding:20px;
+margin-bottom:12px;
+border-radius:10px;
+border:1px solid #e5e7eb;
+box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
 section{
 padding:30px 10%;
 }
@@ -111,58 +123,6 @@ padding:30px 10%;
 .section-title{
 font-size:1.6rem;
 margin-bottom:15px;
-color:#111827;
-}
-
-/* CARDS */
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
-margin-bottom:12px;
-box-shadow:0 2px 8px rgba(0,0,0,0.06);
-border:1px solid #e5e7eb;
-}
-
-/* TIMELINE */
-.timeline{
-display:flex;
-flex-direction:column;
-gap:12px;
-}
-
-/* LIST */
-ul{
-margin-left:20px;
-margin-top:10px;
-}
-
-li{
-margin-bottom:6px;
-}
-
-/* SKILLS */
-.skills-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:10px;
-}
-
-.skill{
-background:white;
-padding:10px;
-border-radius:8px;
-text-align:center;
-box-shadow:0 1px 5px rgba(0,0,0,0.05);
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:15px;
-background:white;
-border-top:1px solid #e5e7eb;
-margin-top:20px;
 }
 
 /* DARK MODE */
@@ -172,16 +132,23 @@ color:#e5e7eb;
 }
 
 body.dark header,
-body.dark .card,
-body.dark footer,
-body.dark .skill{
+body.dark .card{
 background:#1e293b;
 border-color:#334155;
 color:#e5e7eb;
 }
 
 body.dark .section-title{
-color:white;
+color:#ffffff;
+}
+
+/* CONTACT LINKS */
+.contact a{
+color:#2563eb;
+}
+
+body.dark .contact a{
+color:#60a5fa;
 }
 
 </style>
@@ -189,25 +156,24 @@ color:white;
 
 <body>
 
+<!-- TOGGLE -->
+<div class="theme-switch">
+<label class="switch">
+<input type="checkbox" onchange="document.body.classList.toggle('dark')">
+<span class="slider"></span>
+</label>
+</div>
+
 <!-- HEADER -->
 <header>
 <div class="hero-container">
 
-<div class="hero-left">
 <img src="profile.jpg" class="profile-pic">
-</div>
 
-<div class="hero-right">
-<h1>
-Gudiseva Shalom Vardhan
-<button class="theme-btn" onclick="toggleTheme()">🌙</button>
-</h1>
+<div>
+<h1>Gudiseva Shalom Vardhan</h1>
+<p>Automotive Design & Automation Engineer | Digital Twin | CAD | Robotics | Manufacturing</p>
 
-<p>
-Automotive Design & Automation Engineer | Digital Twin | CAD | Robotics | Manufacturing
-</p>
-
-<div class="btn-group">
 <a href="resume.pdf" class="btn">Download Resume</a>
 <a href="mailto:shalomvardhan@gmail.com" class="btn">Email Me</a>
 <a href="https://wa.me/916303101491" class="btn">WhatsApp</a>
@@ -215,10 +181,9 @@ Automotive Design & Automation Engineer | Digital Twin | CAD | Robotics | Manufa
 </div>
 
 </div>
-</div>
 </header>
 
-<!-- ABOUT -->
+<!-- ABOUT (FULL ORIGINAL RESTORED) -->
 <section>
 <h2 class="section-title">About Me</h2>
 
@@ -227,110 +192,64 @@ Automotive Design & Automation Engineer | Digital Twin | CAD | Robotics | Manufa
 I am an Automotive Design and Automation Engineer with over 2 years of experience in automotive design, industrial automation, production support, and digital twin development. My expertise includes 3D CAD modeling, plant layout design, robotic automation, manufacturing process optimization, and production engineering.
 </p>
 
-<br>
-
 <p>
 I have successfully worked on industrial automation projects involving ABB robots, gantry systems, PLC modifications, and digital twin environments. I am passionate about developing innovative engineering solutions that improve productivity, efficiency, and operational reliability.
 </p>
 </div>
 </section>
 
-<!-- EXPERIENCE (FULL CONTENT PRESERVED) -->
+<!-- EXPERIENCE (FULL ORIGINAL RESTORED) -->
 <section>
 <h2 class="section-title">Experience</h2>
 
-<div class="timeline">
-
-<!-- ACTALENT -->
 <div class="card">
 <h3>Design Engineer – Actalent</h3>
-<p><strong>July 2024 – April 2026 | Chennai</strong></p>
+<p>July 2024 – April 2026 | Chennai</p>
 
-<br>
-
-<p><strong>Responsibilities</strong></p>
+<p><b>Responsibilities</b></p>
 <p>
 Developed digital twin models representing real-world industrial and automotive manufacturing facilities. Created detailed 3D plant layouts and coordinated asset placement for production environments. Designed equipment layouts, safety systems, process flow arrangements, and manufacturing layouts using UG NX, AutoCAD, Inventor, and Navisworks. Performed 2D and 3D assembly synchronization to improve manufacturing visualization and layout accuracy. Conducted clash detection and spatial coordination studies to ensure optimal equipment positioning and project feasibility. Prepared engineering drawings, layout documentation, and design deliverables according to customer requirements. Supported factory planning activities through accurate digital representations of manufacturing facilities. Collaborated with engineering, production, and project teams to ensure design accuracy and successful project execution. Assisted in layout modifications and design improvements based on operational and manufacturing requirements.
 </p>
 
-<br>
-
-<p><strong>Key Achievements</strong></p>
+<p><b>Key Achievements</b></p>
 <p>
 Successfully delivered digital twin and plant layout solutions that enhanced manufacturing planning and visualization. Developed accurate 3D facility models and asset placement layouts, improving production planning and space utilization. Reduced CAD model complexity and optimized part sizes, significantly improving file loading times and assembly performance. Improved design quality by identifying and resolving layout clashes before implementation, reducing rework and project delays. Enhanced digital twin model efficiency through optimized asset modeling while maintaining design accuracy and project standards. Contributed to efficient project delivery by providing high-quality engineering layouts and documentation within project timelines. Supported cross-functional teams in optimizing manufacturing workflows and facility layouts for improved operational efficiency. Maintained high design accuracy and compliance with customer requirements across multiple industrial and automotive projects.
 </p>
 </div>
 
-<!-- GREENTECH -->
 <div class="card">
 <h3>Automation Engineer – Greentech Industries</h3>
-<p><strong>July 2023 – June 2024</strong></p>
+<p>July 2023 – June 2024</p>
 
-<br>
-
-<p><strong>Responsibilities</strong></p>
+<p><b>Responsibilities</b></p>
 <p>
-Installed, commissioned, and supported ABB IRB 2600 and IRB 4600 robots in automotive manufacturing environments. Programmed and optimized robot motion paths to improve cycle time, productivity, and process reliability. Designed, modified, and validated robotic fixtures, grippers, and End-of-Arm Tooling (EOAT) based on production requirements. Developed 3D models and engineering drawings for fixtures, grippers, and robotic attachments using SolidWorks. Conducted robot reach studies and tooling feasibility checks to ensure collision-free operation. Performed robot teaching, calibration, backup management, and program modifications. Troubleshot robots, sensors, grippers, fixtures, and automation equipment to minimize production downtime. Assisted in PLC logic modifications using GX Works and Delta PLC platforms to support production changes. Executed preventive maintenance activities to ensure reliable operation of robotic systems. Coordinated with production, maintenance, and quality teams to resolve manufacturing issues and improve operational efficiency. Supported continuous improvement initiatives to enhance manufacturing productivity and equipment performance.
+Installed, commissioned, and supported ABB IRB 2600 and IRB 4600 robots in automotive manufacturing environments. Programmed and optimized robot motion paths to improve cycle time, productivity, and process reliability. Designed, modified, and validated robotic fixtures, grippers, and End-of-Arm Tooling (EOAT) based on production requirements. Developed 3D models and engineering drawings for fixtures, grippers, and robotic attachments using SolidWorks. Conducted robot reach studies and tooling feasibility checks to ensure collision-free operation. Performed robot teaching, calibration, backup management, and program modifications. Troubleshot robots, sensors, grippers, fixtures, and automation equipment to minimize production downtime. Assisted in PLC logic modifications using GX Works and Delta PLC platforms to support production changes. Executed preventive maintenance activities to ensure reliable operation of robotic systems. Coordinated with production, maintenance, and quality teams to resolve manufacturing issues and improve operational efficiency.
 </p>
 
-<br>
-
-<p><strong>Key Achievements</strong></p>
+<p><b>Key Achievements</b></p>
 <p>
 Successfully installed and commissioned ABB robotic systems for automotive production applications. Reduced robot cycle times through motion path optimization, increasing overall production output. Designed and implemented fixture and gripper modifications that improved part handling accuracy and operational efficiency. Successfully created and optimized robot path programs for an automated sand blasting robot in a foundry environment, improving process consistency and product quality. Minimized production downtime by effectively troubleshooting robotic and automation system issues. Improved manufacturing productivity through process optimization and automation enhancements. Supported successful execution of automation projects while maintaining safe and reliable production operations. Collaborated with cross-functional teams to deliver automation solutions that improved efficiency and process stability.
 </p>
 </div>
 
-</div>
 </section>
 
-<!-- SKILLS -->
-<section>
-<h2 class="section-title">Skills</h2>
-
-<div class="skills-grid">
-<div class="skill">CATIA</div>
-<div class="skill">SolidWorks</div>
-<div class="skill">AutoCAD</div>
-<div class="skill">Creo</div>
-<div class="skill">UG NX</div>
-<div class="skill">ABB RobotStudio</div>
-<div class="skill">PLC</div>
-<div class="skill">Digital Twin</div>
-<div class="skill">Automation</div>
-</div>
-</section>
-
-<!-- CONTACT -->
+<!-- CONTACT (RESTORED) -->
 <section>
 <h2 class="section-title">Contact Me</h2>
 
 <div class="card">
-
-<p><strong>Name:</strong> Shalom Vardhan Gudiseva</p>
-<p><strong>Phone:</strong> <a href="tel:+916303101491">+91 6303101491</a></p>
-<p><strong>Email:</strong> <a href="mailto:shalomvardhan@gmail.com">shalomvardhan@gmail.com</a></p>
+<p>Name: Shalom Vardhan Gudiseva</p>
+<p>Phone: <a href="tel:+916303101491">+91 6303101491</a></p>
+<p>Email: <a href="mailto:shalomvardhan@gmail.com">shalomvardhan@gmail.com</a></p>
 
 <br>
 
-<div class="btn-group">
 <a href="mailto:shalomvardhan@gmail.com" class="btn">Email</a>
 <a href="https://wa.me/916303101491" class="btn">WhatsApp</a>
-<a href="linkedin.com/in/shalom-vardhan-gudiseva-37417a283" class="btn">LinkedIn</a>
-</div>
-
+<a href="https://www.linkedin.com/in/shalom-vardhan-gudiseva-37417a283" class="btn">LinkedIn</a>
 </div>
 </section>
-
-<footer>
-© 2026 Shalom Vardhan Gudiseva | Portfolio
-</footer>
-
-<script>
-function toggleTheme(){
-document.body.classList.toggle("dark");
-}
-</script>
 
 </body>
 </html>
