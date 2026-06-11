@@ -20,7 +20,7 @@ line-height:1.6;
 }
 
 header{
-background:linear-gradient(135deg,#0f172a,#1e293b);
+background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
 color:white;
 padding:80px 10%;
 text-align:center;
@@ -38,12 +38,22 @@ opacity:0.9;
 
 .btn{
 display:inline-block;
-margin-top:20px;
+margin-top:15px;
+margin-right:10px;
 padding:12px 24px;
 background:#2563eb;
 color:white;
 text-decoration:none;
 border-radius:6px;
+}
+
+.profile-pic{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid white;
+margin-bottom:20px;
 }
 
 section{
@@ -111,7 +121,12 @@ padding:20px;
 <body>
 
 <header>
+
+<!-- PROFILE PHOTO -->
+<img src="profile.jpg" alt="Profile Photo" class="profile-pic">
+
 <h1>Shalom Vardhan Gudiseva</h1>
+
 <p>
 Design & Manufacturing Engineer |
 Digital Twinning |
@@ -120,11 +135,18 @@ CAD Design |
 Automotive Engineering
 </p>
 
-<a href="mailto:shalomvardhan@gmail.com" class="btn">
-Contact Me
-</a>
+<!-- BUTTONS -->
+<a href="resume.pdf" download class="btn">📄 Download Resume</a>
+
+<a href="mailto:shalomvardhan@gmail.com" class="btn">Contact Me</a>
+
+<a href="https://www.linkedin.com/in/shalom-vardhan-gudiseva-37417a283"
+target="_blank"
+class="btn">LinkedIn Profile</a>
+
 </header>
 
+<!-- ABOUT -->
 <section>
 <h2 class="section-title">About Me</h2>
 
@@ -133,15 +155,11 @@ Contact Me
 Automotive Design and Manufacturing Engineer with 2+ years of
 experience in CAD Design, Digital Twinning, Industrial Automation,
 Robotics, and Manufacturing Engineering.
-
-Passionate about building innovative digital factory solutions,
-robotic automation systems, and advanced manufacturing processes.
-Experienced in Digital Twin technologies, ABB Robotics,
-PLC Programming, and Plant Layout Design.
 </p>
 </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section>
 <h2 class="section-title">Professional Experience</h2>
 
@@ -151,10 +169,9 @@ PLC Programming, and Plant Layout Design.
 <h3>Associate – Actalent</h3>
 <p><strong>July 2024 – Present | Chennai, India</strong></p>
 <ul>
-<li>Working on Digital Twinning solutions.</li>
-<li>Designing digital factories and virtual manufacturing systems.</li>
-<li>Supporting factory simulation and optimization projects.</li>
-<li>Improving manufacturing workflows using digital technologies.</li>
+<li>Digital Twinning solutions</li>
+<li>Virtual manufacturing systems</li>
+<li>Factory simulation & optimization</li>
 </ul>
 </div>
 
@@ -162,16 +179,16 @@ PLC Programming, and Plant Layout Design.
 <h3>Automation Engineer – Greentech Industries</h3>
 <p><strong>July 2023 – June 2024</strong></p>
 <ul>
-<li>Developed robotic automation solutions.</li>
-<li>Worked with ABB Robots and RAPID Programming.</li>
-<li>Implemented industrial automation systems.</li>
-<li>Supported process improvement initiatives.</li>
+<li>ABB Robot programming</li>
+<li>Industrial automation systems</li>
+<li>Process improvement</li>
 </ul>
 </div>
 
 </div>
 </section>
 
+<!-- SKILLS -->
 <section>
 <h2 class="section-title">Technical Skills</h2>
 
@@ -180,18 +197,50 @@ PLC Programming, and Plant Layout Design.
 <div class="skill">Creo</div>
 <div class="skill">SolidWorks</div>
 <div class="skill">AutoCAD</div>
-<div class="skill">Autodesk Inventor</div>
 <div class="skill">UG NX</div>
 <div class="skill">ABB RobotStudio</div>
 <div class="skill">RAPID Programming</div>
 <div class="skill">PLC Programming</div>
 <div class="skill">Digital Twins</div>
-<div class="skill">Plant Layout Design</div>
-<div class="skill">Automation Engineering</div>
+<div class="skill">Plant Layout</div>
 </div>
-
 </section>
 
+<!-- PROJECTS -->
+<section>
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="timeline">
+
+<div class="card">
+<h3>Digital Twin Factory Development</h3>
+<p>Virtual manufacturing simulation and optimization.</p>
+</div>
+
+<div class="card">
+<h3>ABB Robot Programming</h3>
+<p>Industrial automation using RobotStudio & RAPID.</p>
+</div>
+
+<div class="card">
+<h3>Plant Layout Design</h3>
+<p>Optimized factory workflow design.</p>
+</div>
+
+<div class="card">
+<h3>CAD Modeling</h3>
+<p>3D design using CATIA, SolidWorks, AutoCAD.</p>
+</div>
+
+<div class="card">
+<h3>Reverse Engineering</h3>
+<p>CAD reconstruction and design improvement.</p>
+</div>
+
+</div>
+</section>
+
+<!-- EDUCATION -->
 <section>
 <h2 class="section-title">Education</h2>
 
@@ -206,31 +255,15 @@ PLC Programming, and Plant Layout Design.
 <div class="card">
 <h3>Diploma – Automobile Engineering</h3>
 <p>Diviseema Polytechnic College</p>
-<p>2017 – 2020 | Percentage: 86%</p>
-</div>
-
-</section>
-
-<section>
-<h2 class="section-title">Core Expertise</h2>
-
-<div class="skills-grid">
-<div class="skill">Digital Factory</div>
-<div class="skill">Robotics Integration</div>
-<div class="skill">Manufacturing Engineering</div>
-<div class="skill">Factory Simulation</div>
-<div class="skill">Automation Systems</div>
-<div class="skill">Reverse Engineering</div>
-<div class="skill">Mechanical Design</div>
-<div class="skill">Industrial Engineering</div>
+<p>2017 – 2020 | 86%</p>
 </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact">
 <h2 class="section-title">Contact</h2>
 
 <p>Email: shalomvardhan@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/shalom-vardhan-gudiseva-37417a283</p>
 
 <a href="mailto:shalomvardhan@gmail.com" class="btn">
 Hire Me
@@ -238,6 +271,7 @@ Hire Me
 
 </section>
 
+<!-- FOOTER -->
 <footer>
 © 2026 Shalom Vardhan Gudiseva | Portfolio Website
 </footer>
