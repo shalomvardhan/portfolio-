@@ -86,6 +86,7 @@ border-radius:8px;
 text-decoration:none;
 transition:0.3s;
 font-size:14px;
+display:inline-block;
 }
 
 .btn:hover{
@@ -93,9 +94,9 @@ background:#1d4ed8;
 transform:translateY(-2px);
 }
 
-/* SECTIONS (REDUCED SPACING) */
+/* SECTIONS (COMPACT) */
 section{
-padding:35px 10%;
+padding:30px 10%;
 }
 
 /* TITLES */
@@ -112,14 +113,9 @@ padding:16px;
 border-radius:10px;
 margin-bottom:10px;
 box-shadow:0 2px 8px rgba(0,0,0,0.06);
-transition:0.2s;
 }
 
-.card:hover{
-transform:translateY(-4px);
-}
-
-/* TIMELINE (COMPACT) */
+/* TIMELINE */
 .timeline{
 display:flex;
 flex-direction:column;
@@ -144,38 +140,14 @@ box-shadow:0 1px 5px rgba(0,0,0,0.05);
 font-size:14px;
 }
 
-/* CONTACT FORM (CLEAN) */
-form{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.06);
-max-width:450px;
-margin:auto;
+/* CONTACT CARD */
+.contact-card a{
+color:#2563eb;
+text-decoration:none;
 }
 
-input,textarea{
-width:100%;
-padding:10px;
-margin-top:8px;
-border:1px solid #d1d5db;
-border-radius:6px;
-font-size:14px;
-}
-
-textarea{
-height:100px;
-}
-
-.send-btn{
-width:100%;
-margin-top:12px;
-background:#2563eb;
-color:white;
-padding:10px;
-border:none;
-border-radius:6px;
-cursor:pointer;
+.contact-card a:hover{
+text-decoration:underline;
 }
 
 /* FOOTER */
@@ -226,7 +198,7 @@ text-align:center;
             Email Me
             </a>
 
-            <a href="https://wa.me/919XXXXXXXXX" target="_blank" class="btn">
+            <a href="https://wa.me/916303101491" target="_blank" class="btn">
             WhatsApp
             </a>
 
@@ -244,7 +216,7 @@ text-align:center;
 <h2 class="section-title">About Me</h2>
 <div class="card">
 <p>
-Automotive & Manufacturing Engineer specializing in Digital Twin systems, CAD design, robotics automation, and industrial engineering.
+Automotive & Manufacturing Engineer specializing in Digital Twin systems, CAD design, robotics automation, and industrial engineering solutions.
 </p>
 </div>
 </section>
@@ -317,13 +289,29 @@ Automotive & Manufacturing Engineer specializing in Digital Twin systems, CAD de
 <section>
 <h2 class="section-title">Contact Me</h2>
 
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Your Message"></textarea>
-<button class="send-btn">Send Message</button>
-</form>
+<div class="card contact-card">
 
+<p><strong>Name:</strong> Shalom Vardhan Gudiseva</p>
+
+<p><strong>Phone:</strong> 
+<a href="tel:+916303101491">+91 6303101491</a>
+</p>
+
+<p><strong>Email:</strong> 
+<a href="mailto:shalomvardhan@gmail.com">shalomvardhan@gmail.com</a>
+</p>
+
+<br>
+
+<div class="btn-group">
+<a href="mailto:shalomvardhan@gmail.com?subject=Job Opportunity" class="btn">Email</a>
+
+<a href="https://wa.me/916303101491" target="_blank" class="btn">WhatsApp</a>
+
+<a href="https://www.linkedin.com/in/shalom-vardhan-gudiseva-37417a283" target="_blank" class="btn">LinkedIn</a>
+</div>
+
+</div>
 </section>
 
 <footer>
