@@ -125,6 +125,27 @@ font-size:1.6rem;
 margin-bottom:15px;
 }
 
+/* PROJECTS */
+.timeline{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+/* SKILLS */
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:10px;
+}
+
+.skill{
+background:white;
+padding:10px;
+border-radius:8px;
+text-align:center;
+}
+
 /* DARK MODE */
 body.dark{
 background:#0f172a;
@@ -132,7 +153,8 @@ color:#e5e7eb;
 }
 
 body.dark header,
-body.dark .card{
+body.dark .card,
+body.dark .skill{
 background:#1e293b;
 border-color:#334155;
 color:#e5e7eb;
@@ -183,7 +205,7 @@ color:#60a5fa;
 </div>
 </header>
 
-<!-- ABOUT (FULL ORIGINAL RESTORED) -->
+<!-- ABOUT -->
 <section>
 <h2 class="section-title">About Me</h2>
 
@@ -198,7 +220,7 @@ I have successfully worked on industrial automation projects involving ABB robot
 </div>
 </section>
 
-<!-- EXPERIENCE (FULL ORIGINAL RESTORED) -->
+<!-- EXPERIENCE -->
 <section>
 <h2 class="section-title">Experience</h2>
 
@@ -213,7 +235,7 @@ Developed digital twin models representing real-world industrial and automotive 
 
 <p><b>Key Achievements</b></p>
 <p>
-Successfully delivered digital twin and plant layout solutions that enhanced manufacturing planning and visualization. Developed accurate 3D facility models and asset placement layouts, improving production planning and space utilization. Reduced CAD model complexity and optimized part sizes, significantly improving file loading times and assembly performance. Improved design quality by identifying and resolving layout clashes before implementation, reducing rework and project delays. Enhanced digital twin model efficiency through optimized asset modeling while maintaining design accuracy and project standards. Contributed to efficient project delivery by providing high-quality engineering layouts and documentation within project timelines. Supported cross-functional teams in optimizing manufacturing workflows and facility layouts for improved operational efficiency. Maintained high design accuracy and compliance with customer requirements across multiple industrial and automotive projects.
+Successfully delivered digital twin and plant layout solutions that enhanced manufacturing planning and visualization. Developed accurate 3D facility models and asset placement layouts, improving production planning and space utilization. Reduced CAD model complexity and optimized part sizes, significantly improving file loading times and assembly performance. Improved design quality by identifying and resolving layout clashes before implementation, reducing rework and project delays. Enhanced digital twin model efficiency through optimized asset modeling while maintaining design accuracy and project standards. Contributed to efficient project delivery by providing high-quality engineering layouts and documentation within project timelines. Supported cross-functional teams in optimizing manufacturing workflows and facility layouts for improved operational efficiency.
 </p>
 </div>
 
@@ -228,13 +250,42 @@ Installed, commissioned, and supported ABB IRB 2600 and IRB 4600 robots in autom
 
 <p><b>Key Achievements</b></p>
 <p>
-Successfully installed and commissioned ABB robotic systems for automotive production applications. Reduced robot cycle times through motion path optimization, increasing overall production output. Designed and implemented fixture and gripper modifications that improved part handling accuracy and operational efficiency. Successfully created and optimized robot path programs for an automated sand blasting robot in a foundry environment, improving process consistency and product quality. Minimized production downtime by effectively troubleshooting robotic and automation system issues. Improved manufacturing productivity through process optimization and automation enhancements. Supported successful execution of automation projects while maintaining safe and reliable production operations. Collaborated with cross-functional teams to deliver automation solutions that improved efficiency and process stability.
+Successfully installed and commissioned ABB robotic systems for automotive production applications. Reduced robot cycle times through motion path optimization, increasing overall production output. Designed and implemented fixture and gripper modifications that improved part handling accuracy and operational efficiency. Successfully created and optimized robot path programs for an automated sand blasting robot in a foundry environment, improving process consistency and product quality. Minimized production downtime by effectively troubleshooting robotic and automation system issues. Improved manufacturing productivity through process optimization and automation enhancements.
 </p>
 </div>
 
 </section>
 
-<!-- CONTACT (RESTORED) -->
+<!-- PROJECTS (RESTORED) -->
+<section>
+<h2 class="section-title">Projects</h2>
+
+<div class="timeline">
+
+<div class="card">
+<h3>Digital Twin Factory Project</h3>
+<p>Virtual manufacturing environment for factory planning and optimization.</p>
+</div>
+
+<div class="card">
+<h3>ABB Robot Programming Project</h3>
+<p>Industrial robotic automation using ABB RobotStudio and RAPID programming.</p>
+</div>
+
+<div class="card">
+<h3>Plant Layout Design</h3>
+<p>Optimized factory layouts for improved workflow and efficiency.</p>
+</div>
+
+<div class="card">
+<h3>CAD Modeling & Reverse Engineering</h3>
+<p>3D modeling and design reconstruction using CAD tools.</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
 <section>
 <h2 class="section-title">Contact Me</h2>
 
@@ -250,6 +301,10 @@ Successfully installed and commissioned ABB robotic systems for automotive produ
 <a href="https://www.linkedin.com/in/shalom-vardhan-gudiseva-37417a283" class="btn">LinkedIn</a>
 </div>
 </section>
+
+<footer>
+© 2026 Shalom Vardhan Gudiseva | Portfolio
+</footer>
 
 </body>
 </html>
