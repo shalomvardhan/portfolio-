@@ -18,13 +18,13 @@ font-family:'Inter', sans-serif;
 body{
 background:#f5f7fa;
 color:#1f2937;
-line-height:1.6;
+line-height:1.5;
 }
 
 /* HEADER */
 header{
 background:white;
-padding:70px 10%;
+padding:50px 10%;
 border-bottom:1px solid #e5e7eb;
 }
 
@@ -32,7 +32,7 @@ border-bottom:1px solid #e5e7eb;
 display:flex;
 align-items:center;
 justify-content:center;
-gap:60px;
+gap:50px;
 flex-wrap:wrap;
 }
 
@@ -43,8 +43,8 @@ justify-content:center;
 }
 
 .profile-pic{
-width:220px;
-height:220px;
+width:200px;
+height:200px;
 border-radius:50%;
 object-fit:cover;
 border:4px solid #2563eb;
@@ -61,129 +61,131 @@ text-align:left;
 }
 
 .hero-right h1{
-font-size:2.6rem;
-margin-bottom:10px;
-color:#111827;
+font-size:2.4rem;
+margin-bottom:8px;
 }
 
 .hero-right p{
-font-size:1.1rem;
+font-size:1rem;
 color:#4b5563;
-margin-bottom:20px;
+margin-bottom:14px;
 }
 
 /* BUTTONS */
 .btn-group{
 display:flex;
 flex-wrap:wrap;
-gap:10px;
+gap:8px;
 }
 
 .btn{
 background:#2563eb;
 color:white;
-padding:12px 18px;
+padding:10px 16px;
 border-radius:8px;
 text-decoration:none;
 transition:0.3s;
-font-weight:500;
-display:inline-block;
+font-size:14px;
 }
 
 .btn:hover{
 background:#1d4ed8;
-transform:translateY(-3px);
+transform:translateY(-2px);
 }
 
-/* SECTIONS */
+/* SECTIONS (REDUCED SPACING) */
 section{
-padding:70px 12%;
+padding:35px 10%;
 }
 
+/* TITLES */
 .section-title{
-font-size:2rem;
-margin-bottom:20px;
+font-size:1.6rem;
+margin-bottom:12px;
 color:#111827;
 }
 
 /* CARDS */
 .card{
 background:white;
-padding:20px;
-border-radius:12px;
-margin-bottom:15px;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
-transition:0.3s;
+padding:16px;
+border-radius:10px;
+margin-bottom:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.06);
+transition:0.2s;
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-4px);
 }
 
-/* TIMELINE */
+/* TIMELINE (COMPACT) */
 .timeline{
 display:flex;
 flex-direction:column;
-gap:20px;
+gap:10px;
 border-left:3px solid #2563eb;
-padding-left:20px;
+padding-left:15px;
 }
 
 /* SKILLS */
 .skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:12px;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:10px;
 }
 
 .skill{
 background:white;
-padding:12px;
+padding:10px;
 border-radius:8px;
 text-align:center;
-box-shadow:0 2px 8px rgba(0,0,0,0.05);
+box-shadow:0 1px 5px rgba(0,0,0,0.05);
+font-size:14px;
 }
 
-/* CONTACT FORM */
+/* CONTACT FORM (CLEAN) */
 form{
 background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
-max-width:500px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.06);
+max-width:450px;
 margin:auto;
 }
 
 input,textarea{
 width:100%;
-padding:12px;
-margin-top:10px;
+padding:10px;
+margin-top:8px;
 border:1px solid #d1d5db;
-border-radius:8px;
+border-radius:6px;
+font-size:14px;
 }
 
 textarea{
-height:120px;
+height:100px;
 }
 
 .send-btn{
 width:100%;
-margin-top:15px;
+margin-top:12px;
 background:#2563eb;
 color:white;
-padding:12px;
+padding:10px;
 border:none;
-border-radius:8px;
+border-radius:6px;
 cursor:pointer;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:20px;
+padding:15px;
 background:white;
 border-top:1px solid #e5e7eb;
-margin-top:40px;
+margin-top:20px;
+font-size:14px;
 }
 
 /* MOBILE */
@@ -207,7 +209,7 @@ text-align:center;
 <div class="hero-container">
 
     <div class="hero-left">
-        <img src="profile.jpg" class="profile-pic" alt="Profile Photo">
+        <img src="profile.jpg" class="profile-pic" alt="Profile">
     </div>
 
     <div class="hero-right">
@@ -218,18 +220,17 @@ text-align:center;
         </p>
 
         <div class="btn-group">
-            <a href="resume.pdf" download class="btn">📄 Download Resume</a>
+            <a href="resume.pdf" download class="btn">Download Resume</a>
 
-            <a href="mailto:shalomvardhan@gmail.com?subject=Job Opportunity&body=Hi Shalom," class="btn">
-            📧 Email Me
+            <a href="mailto:shalomvardhan@gmail.com?subject=Job Opportunity" class="btn">
+            Email Me
             </a>
 
-            <a href="https://wa.me/916303101491" target="_blank" class="btn">
-            💬 WhatsApp
+            <a href="https://wa.me/919XXXXXXXXX" target="_blank" class="btn">
+            WhatsApp
             </a>
 
-            <a href="https://www.linkedin.com/in/shalom-vardhan-gudiseva-37417a283"
-            target="_blank" class="btn">
+            <a href="https://www.linkedin.com/in/shalom-vardhan-gudiseva-37417a283" target="_blank" class="btn">
             LinkedIn
             </a>
         </div>
@@ -243,7 +244,7 @@ text-align:center;
 <h2 class="section-title">About Me</h2>
 <div class="card">
 <p>
-Automotive and Manufacturing Engineer specializing in Digital Twin systems, robotics automation, CAD design, and industrial engineering solutions.
+Automotive & Manufacturing Engineer specializing in Digital Twin systems, CAD design, robotics automation, and industrial engineering.
 </p>
 </div>
 </section>
@@ -256,14 +257,12 @@ Automotive and Manufacturing Engineer specializing in Digital Twin systems, robo
 
 <div class="card">
 <h3>Actalent – Associate</h3>
-<p><strong>July 2024 – Present</strong></p>
-<p>Digital Twin & Manufacturing Simulation projects, factory optimization and virtual systems.</p>
+<p>Digital Twin & Manufacturing Simulation</p>
 </div>
 
 <div class="card">
 <h3>Greentech Industries – Automation Engineer</h3>
-<p><strong>July 2023 – June 2024</strong></p>
-<p>ABB Robotics programming, industrial automation systems, and process improvement.</p>
+<p>ABB Robotics & Industrial Automation</p>
 </div>
 
 </div>
@@ -276,9 +275,8 @@ Automotive and Manufacturing Engineer specializing in Digital Twin systems, robo
 <div class="skills-grid">
 <div class="skill">CATIA</div>
 <div class="skill">SolidWorks</div>
-<div class="skill">Creo</div>
 <div class="skill">AutoCAD</div>
-<div class="skill">UG NX</div>
+<div class="skill">Creo</div>
 <div class="skill">ABB RobotStudio</div>
 <div class="skill">PLC</div>
 <div class="skill">Digital Twin</div>
@@ -294,27 +292,22 @@ Automotive and Manufacturing Engineer specializing in Digital Twin systems, robo
 
 <div class="card">
 <h3>Digital Twin Factory</h3>
-<p>Simulation of smart manufacturing systems.</p>
+<p>Smart manufacturing simulation system.</p>
 </div>
 
 <div class="card">
 <h3>ABB Robot Programming</h3>
-<p>Industrial robotics automation using ABB systems.</p>
+<p>Industrial robotics automation.</p>
 </div>
 
 <div class="card">
 <h3>Plant Layout Design</h3>
-<p>Optimized factory workflow and space planning.</p>
+<p>Factory workflow optimization.</p>
 </div>
 
 <div class="card">
 <h3>CAD Modeling</h3>
-<p>3D engineering design using CATIA & SolidWorks.</p>
-</div>
-
-<div class="card">
-<h3>Reverse Engineering</h3>
-<p>Product redesign and CAD reconstruction.</p>
+<p>3D engineering design.</p>
 </div>
 
 </div>
@@ -334,7 +327,7 @@ Automotive and Manufacturing Engineer specializing in Digital Twin systems, robo
 </section>
 
 <footer>
-© 2026 Shalom Vardhan Gudiseva | Portfolio Website
+© 2026 Shalom Vardhan | Portfolio
 </footer>
 
 </body>
