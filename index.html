@@ -94,7 +94,7 @@ background:#1d4ed8;
 transform:translateY(-2px);
 }
 
-/* SECTIONS (COMPACT) */
+/* SECTIONS */
 section{
 padding:30px 10%;
 }
@@ -106,13 +106,27 @@ margin-bottom:12px;
 color:#111827;
 }
 
-/* CARDS */
+/* CARD (WHITE DEFAULT + BLUE HOVER) */
 .card{
 background:white;
 padding:16px;
 border-radius:10px;
 margin-bottom:10px;
 box-shadow:0 2px 8px rgba(0,0,0,0.06);
+transition:0.3s ease;
+border:1px solid #e5e7eb;
+}
+
+.card:hover{
+background:#2563eb;
+color:white;
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(37,99,235,0.3);
+}
+
+.card:hover h3,
+.card:hover p{
+color:white;
 }
 
 /* TIMELINE */
@@ -194,17 +208,11 @@ text-align:center;
         <div class="btn-group">
             <a href="resume.pdf" download class="btn">Download Resume</a>
 
-            <a href="mailto:shalomvardhan@gmail.com?subject=Job Opportunity" class="btn">
-            Email Me
-            </a>
+            <a href="mailto:shalomvardhan@gmail.com?subject=Job Opportunity" class="btn">Email Me</a>
 
-            <a href="https://wa.me/916303101491" target="_blank" class="btn">
-            WhatsApp
-            </a>
+            <a href="https://wa.me/916303101491" target="_blank" class="btn">WhatsApp</a>
 
-            <a href="https://www.linkedin.com/in/shalom-vardhan-gudiseva-37417a283" target="_blank" class="btn">
-            LinkedIn
-            </a>
+            <a href="https://www.linkedin.com/in/shalom-vardhan-gudiseva-37417a283" target="_blank" class="btn">LinkedIn</a>
         </div>
     </div>
 
