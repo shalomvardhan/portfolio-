@@ -5,115 +5,183 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shalom Vardhan Gudiseva | Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:'Inter', sans-serif;
 }
 
 body{
-background:#f5f7fa;
-color:#333;
+background:#0b1220;
+color:#e5e7eb;
 line-height:1.6;
 }
 
+/* HERO SECTION */
 header{
-background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
-color:white;
+background:linear-gradient(135deg,#0f172a,#111827,#1e3a8a);
 padding:80px 10%;
-text-align:center;
 }
 
-header h1{
-font-size:3rem;
+.hero-container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+}
+
+/* LEFT */
+.hero-left{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.profile-pic{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #2563eb;
+transition:0.3s;
+}
+
+.profile-pic:hover{
+transform:scale(1.05);
+}
+
+/* RIGHT */
+.hero-right{
+flex:2;
+text-align:left;
+}
+
+.hero-right h1{
+font-size:2.8rem;
 margin-bottom:10px;
 }
 
-header p{
-font-size:1.2rem;
+.hero-right p{
 opacity:0.9;
+font-size:1.1rem;
+margin-bottom:20px;
+}
+
+/* BUTTONS */
+.btn-group{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
 }
 
 .btn{
 display:inline-block;
-margin-top:15px;
-margin-right:10px;
-padding:12px 24px;
+padding:12px 18px;
+border-radius:8px;
 background:#2563eb;
 color:white;
 text-decoration:none;
-border-radius:6px;
+transition:0.3s;
+font-weight:500;
 }
 
-.profile-pic{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid white;
-margin-bottom:20px;
+.btn:hover{
+background:#1d4ed8;
+transform:translateY(-3px);
 }
 
+/* SECTIONS */
 section{
-padding:60px 10%;
+padding:70px 12%;
 }
 
 .section-title{
 font-size:2rem;
-margin-bottom:25px;
-color:#0f172a;
+margin-bottom:20px;
+color:#93c5fd;
 }
 
-.about{
-background:white;
-border-radius:10px;
-padding:30px;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
+/* CARDS */
+.card{
+background:#111827;
+padding:20px;
+border-radius:12px;
+margin-bottom:15px;
+border:1px solid #1f2937;
+transition:0.3s;
 }
 
+.card:hover{
+transform:translateY(-6px);
+border-color:#2563eb;
+}
+
+/* GRID */
 .skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:12px;
 }
 
 .skill{
-background:white;
-padding:15px;
+background:#111827;
+padding:12px;
 border-radius:8px;
 text-align:center;
-font-weight:bold;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
+border:1px solid #1f2937;
 }
 
-.timeline{
+/* CONTACT */
+form{
 display:flex;
 flex-direction:column;
-gap:20px;
+gap:10px;
+max-width:500px;
+margin:auto;
 }
 
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
+input,textarea{
+padding:12px;
+border-radius:8px;
+border:none;
+outline:none;
 }
 
-.card h3{
-color:#1e40af;
+textarea{
+height:120px;
 }
 
-.contact{
-text-align:center;
-}
-
-footer{
-background:#0f172a;
+.send-btn{
+background:#2563eb;
 color:white;
+padding:12px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
 text-align:center;
 padding:20px;
+background:#0f172a;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+.hero-container{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-right{
+text-align:center;
+}
 }
 </style>
 </head>
@@ -122,104 +190,86 @@ padding:20px;
 
 <header>
 
-<!-- PROFILE PHOTO -->
-<img src="profile.jpg" alt="Profile Photo" class="profile-pic">
+<div class="hero-container">
 
-<h1>Shalom Vardhan Gudiseva</h1>
+    <div class="hero-left">
+        <img src="profile.jpg" class="profile-pic" alt="Profile">
+    </div>
 
-<p>
-Design & Manufacturing Engineer |
-Digital Twinning |
-Automation |
-CAD Design |
-Automotive Engineering
-</p>
+    <div class="hero-right">
+        <h1>Shalom Vardhan Gudiseva</h1>
 
-<!-- BUTTONS -->
-<a href="resume.pdf" download class="btn">📄 Download Resume</a>
+        <p>
+        Design & Manufacturing Engineer | Digital Twinning | Automation | CAD Design | Automotive Engineering
+        </p>
 
-<a href="mailto:shalomvardhan@gmail.com" class="btn">Contact Me</a>
+        <div class="btn-group">
+            <a href="resume.pdf" download class="btn">📄 Download Resume</a>
+            <a href="mailto:shalomvardhan@gmail.com" class="btn">Contact Me</a>
+            <a href="https://www.linkedin.com/in/shalom-vardhan-gudiseva-37417a283"
+               target="_blank" class="btn">LinkedIn</a>
+        </div>
+    </div>
 
-<a href="https://www.linkedin.com/in/shalom-vardhan-gudiseva-37417a283"
-target="_blank"
-class="btn">LinkedIn Profile</a>
+</div>
 
 </header>
 
 <!-- ABOUT -->
 <section>
 <h2 class="section-title">About Me</h2>
-
-<div class="about">
+<div class="card">
 <p>
-Automotive Design and Manufacturing Engineer with 2+ years of
-experience in CAD Design, Digital Twinning, Industrial Automation,
-Robotics, and Manufacturing Engineering.
+Automotive & Manufacturing Engineer specializing in Digital Twins,
+CAD design, robotics automation, and industrial systems.
 </p>
 </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section>
-<h2 class="section-title">Professional Experience</h2>
-
-<div class="timeline">
+<h2 class="section-title">Experience</h2>
 
 <div class="card">
-<h3>Associate – Actalent</h3>
-<p><strong>July 2024 – Present | Chennai, India</strong></p>
-<ul>
-<li>Digital Twinning solutions</li>
-<li>Virtual manufacturing systems</li>
-<li>Factory simulation & optimization</li>
-</ul>
+<h3>Actalent – Associate</h3>
+<p>Digital Twin & Manufacturing Simulation</p>
 </div>
 
 <div class="card">
-<h3>Automation Engineer – Greentech Industries</h3>
-<p><strong>July 2023 – June 2024</strong></p>
-<ul>
-<li>ABB Robot programming</li>
-<li>Industrial automation systems</li>
-<li>Process improvement</li>
-</ul>
+<h3>Greentech Industries – Automation Engineer</h3>
+<p>ABB Robotics & Industrial Automation</p>
 </div>
 
-</div>
 </section>
 
 <!-- SKILLS -->
 <section>
-<h2 class="section-title">Technical Skills</h2>
+<h2 class="section-title">Skills</h2>
 
 <div class="skills-grid">
-<div class="skill">CATIA V5</div>
-<div class="skill">Creo</div>
+<div class="skill">CATIA</div>
 <div class="skill">SolidWorks</div>
 <div class="skill">AutoCAD</div>
-<div class="skill">UG NX</div>
+<div class="skill">Creo</div>
 <div class="skill">ABB RobotStudio</div>
-<div class="skill">RAPID Programming</div>
-<div class="skill">PLC Programming</div>
-<div class="skill">Digital Twins</div>
-<div class="skill">Plant Layout</div>
+<div class="skill">PLC</div>
+<div class="skill">Digital Twin</div>
+<div class="skill">Automation</div>
 </div>
 </section>
 
 <!-- PROJECTS -->
 <section>
-<h2 class="section-title">Featured Projects</h2>
-
-<div class="timeline">
+<h2 class="section-title">Projects</h2>
 
 <div class="card">
-<h3>Digital Twin Factory Development</h3>
-<p>Virtual manufacturing simulation and optimization.</p>
+<h3>Digital Twin Factory</h3>
+<p>Simulation of smart manufacturing systems.</p>
 </div>
 
 <div class="card">
 <h3>ABB Robot Programming</h3>
-<p>Industrial automation using RobotStudio & RAPID.</p>
+<p>Industrial automation using robotics.</p>
 </div>
 
 <div class="card">
@@ -229,51 +279,26 @@ Robotics, and Manufacturing Engineering.
 
 <div class="card">
 <h3>CAD Modeling</h3>
-<p>3D design using CATIA, SolidWorks, AutoCAD.</p>
+<p>3D product design using engineering tools.</p>
 </div>
 
-<div class="card">
-<h3>Reverse Engineering</h3>
-<p>CAD reconstruction and design improvement.</p>
-</div>
-
-</div>
-</section>
-
-<!-- EDUCATION -->
-<section>
-<h2 class="section-title">Education</h2>
-
-<div class="card">
-<h3>B.Tech – Automobile Engineering</h3>
-<p>Vignan Institute of Technology and Science</p>
-<p>2020 – 2023 | CGPA: 8.84</p>
-</div>
-
-<br>
-
-<div class="card">
-<h3>Diploma – Automobile Engineering</h3>
-<p>Diviseema Polytechnic College</p>
-<p>2017 – 2020 | 86%</p>
-</div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
-<h2 class="section-title">Contact</h2>
+<section>
+<h2 class="section-title">Contact Me</h2>
 
-<p>Email: shalomvardhan@gmail.com</p>
-
-<a href="mailto:shalomvardhan@gmail.com" class="btn">
-Hire Me
-</a>
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Your Message"></textarea>
+<button class="send-btn">Send Message</button>
+</form>
 
 </section>
 
-<!-- FOOTER -->
 <footer>
-© 2026 Shalom Vardhan Gudiseva | Portfolio Website
+© 2026 Shalom Vardhan | Portfolio
 </footer>
 
 </body>
