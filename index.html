@@ -19,7 +19,6 @@ body{
 background:#f5f7fa;
 color:#1f2937;
 line-height:1.6;
-transition:0.3s ease;
 }
 
 /* HEADER */
@@ -29,107 +28,72 @@ padding:50px 10%;
 border-bottom:1px solid #e5e7eb;
 }
 
-.hero-container{
+.hero{
 display:flex;
+gap:40px;
 align-items:center;
-justify-content:center;
-gap:50px;
 flex-wrap:wrap;
 }
 
 .profile-pic{
-width:200px;
-height:200px;
+width:180px;
+height:180px;
 border-radius:50%;
 object-fit:cover;
 border:4px solid #2563eb;
 }
 
-/* BUTTONS */
+h1{
+font-size:2.2rem;
+}
+
 .btn{
 background:#2563eb;
 color:white;
-padding:10px 16px;
+padding:10px 14px;
 border-radius:8px;
 text-decoration:none;
 display:inline-block;
-border:1px solid #2563eb;
-}
-
-.btn:hover{
-background:#1d4ed8;
-}
-
-/* TOGGLE */
-.theme-switch{
-position:fixed;
-top:15px;
-right:15px;
-z-index:999;
-}
-
-.switch{
-position:relative;
-width:52px;
-height:28px;
-display:inline-block;
-}
-
-.switch input{display:none;}
-
-.slider{
-position:absolute;
-cursor:pointer;
-background:#ccc;
-top:0;left:0;right:0;bottom:0;
-border-radius:34px;
-transition:0.3s;
-}
-
-.slider:before{
-position:absolute;
-content:"";
-height:20px;
-width:20px;
-left:4px;
-bottom:4px;
-background:white;
-border-radius:50%;
-transition:0.3s;
-}
-
-input:checked + .slider{
-background:#2563eb;
-}
-
-input:checked + .slider:before{
-transform:translateX(24px);
-}
-
-/* CARDS */
-.card{
-background:white;
-padding:20px;
-margin-bottom:12px;
-border-radius:10px;
-border:1px solid #e5e7eb;
-box-shadow:0 2px 8px rgba(0,0,0,0.06);
+margin:5px 5px 0 0;
 }
 
 section{
-padding:30px 10%;
+padding:35px 10%;
 }
 
 .section-title{
-font-size:1.6rem;
+font-size:1.7rem;
 margin-bottom:15px;
 }
 
-/* PROJECTS */
-.timeline{
-display:flex;
-flex-direction:column;
-gap:12px;
+/* CARD */
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+margin-bottom:15px;
+border:1px solid #e5e7eb;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.role-title{
+color:#1d4ed8;
+font-size:1.2rem;
+font-weight:600;
+}
+
+.sub-title{
+color:#6b7280;
+margin-bottom:10px;
+}
+
+ul{
+margin-left:18px;
+margin-top:10px;
+}
+
+li{
+margin-bottom:6px;
 }
 
 /* SKILLS */
@@ -144,9 +108,26 @@ background:white;
 padding:10px;
 border-radius:8px;
 text-align:center;
+border:1px solid #e5e7eb;
 }
 
-/* DARK MODE */
+.contact a{
+color:#2563eb;
+}
+
+/* CONTACT BUTTONS - WHITE */
+.contact .btn{
+background:white;
+color:#1f2937;
+border:1px solid #d1d5db;
+}
+
+.contact .btn:hover{
+background:#f3f4f6;
+color:#1f2937;
+}
+
+/* DARK MODE (optional safe) */
 body.dark{
 background:#0f172a;
 color:#e5e7eb;
@@ -161,47 +142,27 @@ color:#e5e7eb;
 }
 
 body.dark .section-title{
-color:#ffffff;
+color:#fff;
 }
-
-/* CONTACT LINKS */
-.contact a{
-color:#2563eb;
-}
-
-body.dark .contact a{
-color:#60a5fa;
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- TOGGLE -->
-<div class="theme-switch">
-<label class="switch">
-<input type="checkbox" onchange="document.body.classList.toggle('dark')">
-<span class="slider"></span>
-</label>
-</div>
-
 <!-- HEADER -->
 <header>
-<div class="hero-container">
-
+<div class="hero">
 <img src="profile.jpg" class="profile-pic">
 
 <div>
 <h1>Gudiseva Shalom Vardhan</h1>
 <p>Automotive Design & Automation Engineer | Digital Twin | CAD | Robotics | Manufacturing</p>
 
-<a href="resume.pdf" class="btn">Download Resume</a>
-<a href="mailto:shalomvardhan@gmail.com" class="btn">Email Me</a>
-<a href="https://wa.me/916303101491" class="btn">WhatsApp</a>
-<a href="https://www.linkedin.com/in/shalom-vardhan-gudiseva-37417a283" class="btn">LinkedIn</a>
+<a class="btn" href="resume.pdf">Download Resume</a>
+<a class="btn" href="mailto:shalomvardhan@gmail.com">Email</a>
+<a class="btn" href="https://wa.me/916303101491">WhatsApp</a>
+<a class="btn" href="https://linkedin.com">LinkedIn</a>
 </div>
-
 </div>
 </header>
 
@@ -225,86 +186,113 @@ I have successfully worked on industrial automation projects involving ABB robot
 <h2 class="section-title">Experience</h2>
 
 <div class="card">
-<h3>Design Engineer – Actalent</h3>
-<p>July 2024 – April 2026 | Chennai</p>
+<div class="role-title">Design Engineer – Actalent</div>
+<div class="sub-title">July 2024 – April 2026 | Chennai</div>
 
-<p><b>Responsibilities</b></p>
-<p>
-Developed digital twin models representing real-world industrial and automotive manufacturing facilities. Created detailed 3D plant layouts and coordinated asset placement for production environments. Designed equipment layouts, safety systems, process flow arrangements, and manufacturing layouts using UG NX, AutoCAD, Inventor, and Navisworks. Performed 2D and 3D assembly synchronization to improve manufacturing visualization and layout accuracy. Conducted clash detection and spatial coordination studies to ensure optimal equipment positioning and project feasibility. Prepared engineering drawings, layout documentation, and design deliverables according to customer requirements. Supported factory planning activities through accurate digital representations of manufacturing facilities. Collaborated with engineering, production, and project teams to ensure design accuracy and successful project execution. Assisted in layout modifications and design improvements based on operational and manufacturing requirements.
-</p>
+<h3>Responsibilities</h3>
+<ul>
+<li>Developed digital twin models representing real-world industrial and automotive manufacturing facilities.</li>
+<li>Created detailed 3D plant layouts and coordinated asset placement for production environments.</li>
+<li>Designed equipment layouts, safety systems, process flow arrangements using UG NX, AutoCAD, Inventor, Navisworks.</li>
+<li>Performed clash detection and spatial coordination studies.</li>
+<li>Prepared engineering drawings and layout documentation.</li>
+<li>Supported factory planning activities and design improvements.</li>
+</ul>
 
-<p><b>Key Achievements</b></p>
-<p>
-Successfully delivered digital twin and plant layout solutions that enhanced manufacturing planning and visualization. Developed accurate 3D facility models and asset placement layouts, improving production planning and space utilization. Reduced CAD model complexity and optimized part sizes, significantly improving file loading times and assembly performance. Improved design quality by identifying and resolving layout clashes before implementation, reducing rework and project delays. Enhanced digital twin model efficiency through optimized asset modeling while maintaining design accuracy and project standards. Contributed to efficient project delivery by providing high-quality engineering layouts and documentation within project timelines. Supported cross-functional teams in optimizing manufacturing workflows and facility layouts for improved operational efficiency.
-</p>
+<h3>Key Achievements</h3>
+<ul>
+<li>Delivered digital twin solutions improving manufacturing planning and visualization.</li>
+<li>Improved space utilization through optimized 3D layouts.</li>
+<li>Reduced CAD model complexity and improved performance.</li>
+<li>Resolved design clashes before implementation.</li>
+<li>Improved workflow efficiency through optimized digital models.</li>
+</ul>
 </div>
 
 <div class="card">
-<h3>Automation Engineer – Greentech Industries</h3>
-<p>July 2023 – June 2024</p>
+<div class="role-title">Automation Engineer – Greentech Industries</div>
+<div class="sub-title">July 2023 – June 2024</div>
 
-<p><b>Responsibilities</b></p>
-<p>
-Installed, commissioned, and supported ABB IRB 2600 and IRB 4600 robots in automotive manufacturing environments. Programmed and optimized robot motion paths to improve cycle time, productivity, and process reliability. Designed, modified, and validated robotic fixtures, grippers, and End-of-Arm Tooling (EOAT) based on production requirements. Developed 3D models and engineering drawings for fixtures, grippers, and robotic attachments using SolidWorks. Conducted robot reach studies and tooling feasibility checks to ensure collision-free operation. Performed robot teaching, calibration, backup management, and program modifications. Troubleshot robots, sensors, grippers, fixtures, and automation equipment to minimize production downtime. Assisted in PLC logic modifications using GX Works and Delta PLC platforms to support production changes. Executed preventive maintenance activities to ensure reliable operation of robotic systems. Coordinated with production, maintenance, and quality teams to resolve manufacturing issues and improve operational efficiency.
-</p>
+<h3>Responsibilities</h3>
+<ul>
+<li>Installed and commissioned ABB IRB 2600 & IRB 4600 robots.</li>
+<li>Programmed robot motion paths and optimized cycle time.</li>
+<li>Designed robotic fixtures and EOAT using SolidWorks.</li>
+<li>Performed robot teaching, calibration, and troubleshooting.</li>
+<li>Worked on PLC systems (GX Works, Delta PLC).</li>
+<li>Supported preventive maintenance activities.</li>
+</ul>
 
-<p><b>Key Achievements</b></p>
-<p>
-Successfully installed and commissioned ABB robotic systems for automotive production applications. Reduced robot cycle times through motion path optimization, increasing overall production output. Designed and implemented fixture and gripper modifications that improved part handling accuracy and operational efficiency. Successfully created and optimized robot path programs for an automated sand blasting robot in a foundry environment, improving process consistency and product quality. Minimized production downtime by effectively troubleshooting robotic and automation system issues. Improved manufacturing productivity through process optimization and automation enhancements.
-</p>
+<h3>Key Achievements</h3>
+<ul>
+<li>Improved robot cycle time through motion optimization.</li>
+<li>Increased production output through automation improvements.</li>
+<li>Reduced downtime through effective troubleshooting.</li>
+<li>Improved part handling accuracy with fixture redesign.</li>
+<li>Enhanced process stability in manufacturing systems.</li>
+</ul>
 </div>
 
 </section>
 
-<!-- PROJECTS (RESTORED) -->
+<!-- PROJECTS (NEW CLEAN FORMAT) -->
 <section>
 <h2 class="section-title">Projects</h2>
 
-<div class="timeline">
-
 <div class="card">
-<h3>Digital Twin Factory Project</h3>
-<p>Virtual manufacturing environment for factory planning and optimization.</p>
+<h3>Digital Twin Factory Simulation</h3>
+<p>Developed virtual manufacturing environment for factory layout planning and optimization using CAD tools and digital twin concepts.</p>
 </div>
 
 <div class="card">
 <h3>ABB Robot Programming Project</h3>
-<p>Industrial robotic automation using ABB RobotStudio and RAPID programming.</p>
+<p>Designed and optimized robotic automation sequences using ABB RobotStudio to improve cycle time and production efficiency.</p>
 </div>
 
 <div class="card">
-<h3>Plant Layout Design</h3>
-<p>Optimized factory layouts for improved workflow and efficiency.</p>
+<h3>Plant Layout Design Optimization</h3>
+<p>Created optimized factory layouts to improve workflow efficiency, space utilization, and manufacturing productivity.</p>
 </div>
 
 <div class="card">
 <h3>CAD Modeling & Reverse Engineering</h3>
-<p>3D modeling and design reconstruction using CAD tools.</p>
+<p>Developed 3D models and reconstructed mechanical components using advanced CAD tools for design improvement.</p>
 </div>
 
+</section>
+
+<!-- SKILLS -->
+<section>
+<h2 class="section-title">Skills</h2>
+
+<div class="skills-grid">
+<div class="skill">CATIA</div>
+<div class="skill">SolidWorks</div>
+<div class="skill">AutoCAD</div>
+<div class="skill">UG NX</div>
+<div class="skill">PLC</div>
+<div class="skill">ABB Robotics</div>
+<div class="skill">Digital Twin</div>
+<div class="skill">Manufacturing</div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section>
-<h2 class="section-title">Contact Me</h2>
+<h2 class="section-title">Contact</h2>
 
-<div class="card">
-<p>Name: Shalom Vardhan Gudiseva</p>
-<p>Phone: <a href="tel:+916303101491">+91 6303101491</a></p>
-<p>Email: <a href="mailto:shalomvardhan@gmail.com">shalomvardhan@gmail.com</a></p>
+<div class="card contact">
+<p><b>Name:</b> Shalom Vardhan Gudiseva</p>
+<p><b>Phone:</b> <a href="tel:+916303101491">+91 6303101491</a></p>
+<p><b>Email:</b> <a href="mailto:shalomvardhan@gmail.com">shalomvardhan@gmail.com</a></p>
 
 <br>
 
-<a href="mailto:shalomvardhan@gmail.com" class="btn">Email</a>
-<a href="https://wa.me/916303101491" class="btn">WhatsApp</a>
-<a href="https://www.linkedin.com/in/shalom-vardhan-gudiseva-37417a283" class="btn">LinkedIn</a>
+<a class="btn" href="mailto:shalomvardhan@gmail.com">Email</a>
+<a class="btn" href="https://wa.me/916303101491">WhatsApp</a>
+<a class="btn" href="https://linkedin.com">LinkedIn</a>
 </div>
 </section>
-
-<footer>
-© 2026 Shalom Vardhan Gudiseva | Portfolio
-</footer>
 
 </body>
 </html>
